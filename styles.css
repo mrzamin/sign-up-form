@@ -8,8 +8,8 @@
 }
 
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -32,7 +32,9 @@ body {
 
 .hero {
   background-image: url(healthy-food-unsplash.jpg);
+  background-size: 100%;
   background-repeat: no-repeat;
+  background-color: grey;
   height: 100%;
   width: 40%;
 }
