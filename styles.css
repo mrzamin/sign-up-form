@@ -42,6 +42,7 @@ body {
   background-color: grey;
   height: 100%;
   width: 40%;
+  position: relative;
 }
 
 .logo-bar {
@@ -74,4 +75,19 @@ img,
 .page-title {
   font-size: 2rem;
   text-wrap: nowrap;
+}
+
+.img-credit {
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 5px;
+  width: 100%;
+  position: absolute;
+  bottom: 7px;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.img-credit > a {
+  color: white;
 }
