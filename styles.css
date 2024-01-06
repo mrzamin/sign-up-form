@@ -28,6 +28,55 @@ body {
   width: 100vw;
 }
 
+/* Style left side*/
+.hero {
+  flex-grow: 1;
+  width: 60vw;
+  height: 100vh;
+  min-width: 345px;
+  position: relative;
+  background: url(healthy-food-unsplash.jpg);
+  background-size: cover;
+  background-position: bottom right;
+  border: 3px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.hero div {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  line-height: 2rem;
+  padding: 0px 2vw;
+
+  border: 3px solid red;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero img {
+  width: 4rem;
+  padding: 10px;
+}
+
+.hero h1 {
+  font-family: Norse;
+  font-size: 4rem;
+}
+
+.hero p {
+  position: absolute;
+  bottom: 0px;
+  font-size: 0.9rem;
+  padding: 3px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+}
 /* * {
   margin: 0;
   padding: 0;
