@@ -19,6 +19,8 @@ body {
   height: 100%;
   margin: 0px;
   padding: 0px;
+
+  overflow: hidden;
 }
 /*overflow?*/
 
@@ -77,6 +79,40 @@ body {
   background-color: rgba(0, 0, 0, 0.4);
   width: 100%;
 }
+
+/* Main section with form */
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: rgb(245, 242, 242);
+
+  flex-grow: 2;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-color: white;
+  padding: 2rem 2vw 3rem 2vw;
+  box-shadow: 5px 5px 8px #888888;
+}
+
+.first-section,
+.third-section {
+  padding-left: 2vw;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 60vw;
+}
+
 /* * {
   margin: 0;
   padding: 0;
