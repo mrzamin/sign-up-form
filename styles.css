@@ -12,7 +12,23 @@
   font-family: customFont, system-ui, "Segoe UI", Roboto;
 }
 
-* {
+body {
+  font-family: customFont;
+  font-size: 1.2rem;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+/*overflow?*/
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -49,7 +65,8 @@ body {
   background: rgba(0, 0, 0, 0.4);
   height: 170px;
   margin-top: 30%;
-  padding: 1rem;
+  padding: 10px;
+  justify-content: center;
   display: flex;
   color: white;
   font-size: 1rem;
@@ -58,24 +75,31 @@ body {
 img,
 .page-title {
   max-height: 100%;
-  line-height: 1.1;
+  line-height: 1;
 }
 
 .logo-bar > * {
   border: 3px solid white;
   padding: 5px;
+  width: 80%;
 }
 
 .odin-fuel {
-  display: block;
-  font-family: Norse;
+  /*display: block;*/
+/* font-family: Norse;
   font-size: 3rem;
 }
 
-.page-title {
-  font-size: 2rem;
-  text-wrap: nowrap;
+.odin-logo {
+  flex-shrink: 2;
 }
+
+.page-title {
+  flex-shrink: 1;
+  display: flex;
+  flex-direction: column;
+  /*text-wrap: nowrap;*/
+/* }
 
 .img-credit {
   color: white;
@@ -86,8 +110,29 @@ img,
   bottom: 7px;
   font-size: 0.8rem;
   text-align: center;
-}
-
+} */
+/* 
 .img-credit > a {
   color: white;
 }
+
+main {
+  height: 100%;
+  border: 2px solid salmon;
+  display: flex;
+  flex-direction: column;
+} */
+/* 
+main > * {
+  flex: 1;
+  border: 2px solid salmon;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+}
+
+.description > .para-one {
+  border: 2px solid salmon;
+} */

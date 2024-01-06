@@ -3,87 +3,83 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign-Up Here</title>
+    <title>Sign-Up Form</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="wrapper">
       <div class="hero">
         <div class="logo-bar">
-          <div class="odin-logo">
-            <img src="odin-logo.png" alt="The Odin Project Logo" />
-          </div>
-          <h1 class="page-title">
-            <span class="odin-fuel">ODIN FUEL</span>Nutrition Program
-          </h1>
+          <img src="odin-logo.png" alt="The Odin Project Logo" class="logo" />
+          <h1 class="title">Odin Fuel</h1>
         </div>
-        <p class="img-credit">
-          Photo by
-          <a
-            href="https://unsplash.com/@nobiteuntilphoto?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
-            >Mariana Medvedeva</a
-          >
-          on
-          <a
-            href="https://unsplash.com/@nobiteuntilphoto?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
-            >Unsplash</a
-          >
-        </p>
+        <p class="img-credit">Photo by Mariana Medvedeva on Unsplash</p>
       </div>
-
-      <main>
-        <div class="description">
-          <p class="para-one">
-            This is not a real online service! You know you need something like
-            this in your life to help you realize your deepest dreams. Sign up
-            <em>now</em> to get started.
-          </p>
-          <p class="para-two">You <em>know</em> you want to.</p>
-        </div>
-
-        <form action="#">
-          <div class="form-wrapper">
-            <p>Let's do this!</p>
-
-            <fieldset class="row-1">
-              <label for="firstname"
-                >First Name
-                <input type="text" name="firstname" id="firstname" required />
-              </label>
-              <label for="lastname"
-                >Last Name
-                <input type="text" name="lastname" id="lastname" required />
-              </label>
-            </fieldset>
-            <fieldset class="row-2">
-              <label for="email"
-                >Email
-                <input type="email" name="email" id="email" required />
-              </label>
-              <label for="phonenumber"
-                >Phone Number
-                <input
-                  type="tel"
-                  name="phonenumber"
-                  id="phonenumber"
-                  required
-                />
-              </label>
-            </fieldset>
-            <fieldset class="row-3">
-              <label for="password"
-                >Password
-                <input type="password" name="password" id="password" required />
-              </label>
-            </fieldset>
+      <div class="main">
+        <div class="first-section">
+          <div class="text">
+            <p class="para-one">
+              This is not a real online service! You know you need something
+              like this in your life to help you realize your deepest dreams.
+              Sign up now to get started.
+            </p>
+            <p class="para-two">You know you want to.</p>
           </div>
-        </form>
-
-        <div class="button-area">
-          <button type="submit">Create Account</button>
-          <p>Already have an account? <a href="#">Login</a></p>
         </div>
-      </main>
+        <div class="second-section">
+          <div class="form-section">
+            <p class="legend">Let's do this!</p>
+            <form action="#" id="account-creation">
+              <label for="firstname"
+                >First Name<input
+                  type="text"
+                  id="firstname"
+                  name="firstname"
+                  required
+              /></label>
+              <label for="lastname"
+                >Last Name<input
+                  type="text"
+                  id="lastname"
+                  name="lastname"
+                  required /></label
+              ><label for="email"
+                >Email<input
+                  type="text"
+                  id="email"
+                  name="email"
+                  required /></label
+              ><label for="phonenumber"
+                >Phone Number<input
+                  type="text"
+                  id="phonenumber"
+                  name="phonenumber"
+                  required /></label
+              ><label for="password"
+                >Password<input
+                  type="text"
+                  id="password"
+                  name="password"
+                  required /></label
+              ><label for="confirmpassword"
+                >Confirm Password<input
+                  type="text"
+                  id="confirmpassword"
+                  name="confirmpassword"
+                  required
+              /></label>
+            </form>
+          </div>
+        </div>
+        <div class="third-section">
+          <div class="submit-section">
+            <button type="submit" form="account-creation">
+              Create Account
+            </button>
+            <p>Already have an account? <a href="#">Log in</a></p>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
