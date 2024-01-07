@@ -137,6 +137,14 @@ input {
   margin-top: 1.5rem;
 }
 
+.third-section p {
+  font-size: 1.3rem;
+}
+.third-section a {
+  text-decoration: underline;
+  color: rgb(115, 215, 21);
+}
+
 button[type="submit"] {
   font-family: customFont;
   font-size: 1.3rem;
@@ -149,6 +157,10 @@ button[type="submit"] {
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px;
   padding: 1.1rem;
+}
+
+button[type="submit"]:hover {
+  background-color: rgb(115, 215, 21, 0.5);
 }
 /* * {
   margin: 0;
