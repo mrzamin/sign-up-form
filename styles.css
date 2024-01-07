@@ -126,13 +126,30 @@ input {
   display: block;
   width: 90%;
   font-family: Norse;
-  font-size: 1rem;
+  font-size: 1.3rem;
   padding: 5px 10px;
   border-radius: 5px;
   border: 1px solid rgb(193, 192, 189);
   margin-top: 5px;
 }
 
+.third-section {
+  margin-top: 1.5rem;
+}
+
+button[type="submit"] {
+  font-family: customFont;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: white;
+  background-color: rgb(115, 215, 21);
+  border: none;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px;
+  padding: 1.1rem;
+}
 /* * {
   margin: 0;
   padding: 0;
