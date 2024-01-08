@@ -175,3 +175,34 @@ input:focus:valid {
 input:focus:invalid {
   border: 2px solid rgb(230, 50, 34);
 }
+
+@media screen and (max-width: 800px) {
+  body {
+    overflow: visible;
+  }
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .hero {
+    width: 100vw;
+    height: 20rem;
+  }
+
+  .second-section,
+  .third-section {
+    width: 100vw;
+  }
+  .text,
+  .form-section,
+  .submit-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  form {
+    width: 80vw;
+  }
+}
