@@ -69,13 +69,14 @@ body {
 }
 
 .hero p {
+  box-sizing: border-box;
   position: absolute;
   bottom: -14px;
   font-size: 0.9rem;
   padding: 5px;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5);
-  width: 98%;
+  width: 100%;
 }
 
 .hero a {
@@ -193,6 +194,7 @@ input:focus:invalid {
   .third-section {
     width: 100vw;
   }
+
   .text,
   .form-section,
   .submit-section {
@@ -201,8 +203,10 @@ input:focus:invalid {
     justify-content: center;
     align-items: center;
   }
+}
 
-  form {
-    width: 80vw;
+@media screen and (max-width: 370px) {
+  .hero h1 {
+    text-wrap: nowrap;
   }
 }
