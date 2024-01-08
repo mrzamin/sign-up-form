@@ -52,38 +52,60 @@
                   id="firstname"
                   name="firstname"
                   required
-              /></label>
+                />
+                <div class="error" id="first-name-error" hidden>
+                  Please provide your first name.
+                </div></label
+              >
               <label for="lastname"
                 >Last Name<input
                   type="text"
                   id="lastname"
                   name="lastname"
-                  required /></label
+                  required
+                />
+                <div class="error" id="last-name-error" hidden>
+                  Please provide your last name.
+                </div></label
               ><label for="email"
-                >Email<input
-                  type="text"
-                  id="email"
-                  name="email"
-                  required /></label
+                >Email<input type="text" id="email" name="email" required />
+                <div class="error" id="email-error" hidden>
+                  Please provide a valid email (@).
+                </div></label
               ><label for="phonenumber"
                 >Phone Number<input
                   type="text"
                   id="phonenumber"
                   name="phonenumber"
-                  required /></label
+                  pattern="[0-9]{10}"
+                  required
+                />
+                <div class="error" id="phone-error" hidden>
+                  Please enter a 10-digit number.
+                </div></label
               ><label for="password"
                 >Password<input
                   type="text"
                   id="password"
                   name="password"
-                  required /></label
+                  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                  required
+                />
+                <div class="error" id="password-error" hidden>
+                  Must contain at least one number, one uppercase and lowercase
+                  letter, and at least 8 characters
+                </div></label
               ><label for="confirmpassword"
                 >Confirm Password<input
                   type="text"
                   id="confirmpassword"
                   name="confirmpassword"
                   required
-              /></label>
+                />
+                <div class="error" id="confirm-password-error" hidden>
+                  Password does not match
+                </div></label
+              >
             </form>
           </div>
         </div>

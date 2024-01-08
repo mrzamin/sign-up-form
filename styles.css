@@ -33,14 +33,14 @@ body {
 /* Style left side*/
 .hero {
   flex-grow: 1;
-  width: 60vw;
+  width: 70vw;
   height: 100vh;
   min-width: 345px;
   position: relative;
   background: url(healthy-food-unsplash.jpg);
   background-size: cover;
   background-position: bottom right;
-  border: 3px solid red;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,12 +48,10 @@ body {
 }
 
 .hero div {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   line-height: 2rem;
   padding: 0px 2vw;
-
-  border: 3px solid red;
 
   display: flex;
   justify-content: center;
@@ -72,12 +70,12 @@ body {
 
 .hero p {
   position: absolute;
-  bottom: -15px;
+  bottom: -14px;
   font-size: 0.9rem;
-  padding: 3px;
+  padding: 5px;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.4);
-  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 98%;
 }
 
 .hero a {
@@ -104,6 +102,10 @@ body {
   box-shadow: 5px 5px 8px #888888;
 }
 
+.first-section {
+  padding-right: 2vw;
+  padding-bottom: 3vh;
+}
 .first-section,
 .third-section {
   padding-left: 2vw;
@@ -113,11 +115,9 @@ form {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  width: 60vw;
 }
 
 label {
-  border: 3px solid red;
   width: 15rem;
   position: relative;
 }
@@ -162,111 +162,16 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: rgb(115, 215, 21, 0.5);
 }
-/* * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+
+input:focus {
+  border: none;
+  outline: none;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.356);
+}
+input:focus:valid {
+  border: 2px solid rgb(115, 215, 21);
 }
 
-body {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #333;
+input:focus:invalid {
+  border: 2px solid rgb(230, 50, 34);
 }
-
-.wrapper {
-  display: flex;
-  align-items: center;
-  height: 80vh;
-  max-width: 90vw;
-  border-radius: 1rem;
-  box-shadow: 5px 10px 8px #888888;
-}
-
-.hero {
-  background-image: url(healthy-food-unsplash.jpg);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-color: grey;
-  height: 100%;
-  width: 40%;
-  position: relative;
-}
-
-.logo-bar {
-  background: rgba(0, 0, 0, 0.4);
-  height: 170px;
-  margin-top: 30%;
-  padding: 10px;
-  justify-content: center;
-  display: flex;
-  color: white;
-  font-size: 1rem;
-}
-
-img,
-.page-title {
-  max-height: 100%;
-  line-height: 1;
-}
-
-.logo-bar > * {
-  border: 3px solid white;
-  padding: 5px;
-  width: 80%;
-}
-
-.odin-fuel {
-  /*display: block;*/
-/* font-family: Norse;
-  font-size: 3rem;
-}
-
-.odin-logo {
-  flex-shrink: 2;
-}
-
-.page-title {
-  flex-shrink: 1;
-  display: flex;
-  flex-direction: column;
-  /*text-wrap: nowrap;*/
-/* }
-
-.img-credit {
-  color: white;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 5px;
-  width: 100%;
-  position: absolute;
-  bottom: 7px;
-  font-size: 0.8rem;
-  text-align: center;
-} */
-/* 
-.img-credit > a {
-  color: white;
-}
-
-main {
-  height: 100%;
-  border: 2px solid salmon;
-  display: flex;
-  flex-direction: column;
-} */
-/* 
-main > * {
-  flex: 1;
-  border: 2px solid salmon;
-}
-
-.description {
-  display: flex;
-  flex-direction: column;
-}
-
-.description > .para-one {
-  border: 2px solid salmon;
-} */
