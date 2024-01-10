@@ -62,7 +62,7 @@
                   name="lastname"
                   required
                 />
-                <div class="error" id="last-name-error" hidden>
+                <div class="error" id="last-name-error">
                   Please provide your last name.
                 </div></label
               ><label for="email"
@@ -75,11 +75,8 @@
                   id="phonenumber"
                   name="phonenumber"
                   pattern="[0-9]{10}"
-                  required
-                />
-                <div class="error" id="phone-error" hidden>
-                  Please enter a 10-digit number.
-                </div></label
+                  required />
+                <div class="error" id="phone-error"></div></label
               ><label for="password"
                 >Password<input
                   type="password"
@@ -87,12 +84,8 @@
                   id="password"
                   name="password"
                   pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                  required
-                />
-                <div class="error" id="password-error" hidden>
-                  Must contain at least one number, one uppercase and lowercase
-                  letter, and at least 8 characters
-                </div></label
+                  required />
+                <div class="error" id="password-error"></div></label
               ><label for="confirmpassword"
                 >Confirm Password<input
                   type="password"
