@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign-Up Form</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="main.js"></script>
+    <script defer src="main.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -52,12 +52,9 @@
                   type="text"
                   id="firstname"
                   name="firstname"
-                  required
-                />
-                <div class="error" id="first-name-error" d>
-                  Please enter your first name.
-                </div></label
-              >
+                  required />
+                <div class="error" id="first-name-error" d></div
+              ></label>
               <label for="lastname"
                 >Last Name<input
                   type="text"
@@ -70,9 +67,7 @@
                 </div></label
               ><label for="email"
                 >Email<input type="text" id="email" name="email" required />
-                <div class="error" id="email-error" hidden>
-                  Please provide a valid email (@).
-                </div></label
+                <div class="error" id="email-error"></div></label
               ><label for="phonenumber"
                 >Phone Number<input
                   type="tel"
@@ -87,7 +82,7 @@
                 </div></label
               ><label for="password"
                 >Password<input
-                  type="text"
+                  type="password"
                   minlength="8"
                   id="password"
                   name="password"
@@ -100,7 +95,8 @@
                 </div></label
               ><label for="confirmpassword"
                 >Confirm Password<input
-                  type="text"
+                  type="password"
+                  minlength="8"
                   id="confirmpassword"
                   name="confirmpassword"
                   required

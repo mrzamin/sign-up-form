@@ -177,6 +177,12 @@ input:focus:invalid {
   border: 2px solid rgb(230, 50, 34);
 }
 
+#email-error {
+  color: red;
+  border: 3px solid black;
+  height: 25px;
+}
+
 @media screen and (max-width: 800px) {
   body {
     overflow: visible;
