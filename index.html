@@ -46,15 +46,18 @@
         <div class="second-section">
           <div class="form-section">
             <p class="legend">Let's do this!</p>
-            <form action="#" id="account-creation">
+            <form action="#" id="account-creation" novalidate>
               <label for="firstname"
                 >First Name<input
                   type="text"
                   id="firstname"
                   name="firstname"
-                  required />
-                <div class="error" id="first-name-error"></div
-              ></label>
+                  required
+                />
+                <div class="error" id="first-name-error" d>
+                  Please enter your first name.
+                </div></label
+              >
               <label for="lastname"
                 >Last Name<input
                   type="text"
@@ -72,7 +75,8 @@
                 </div></label
               ><label for="phonenumber"
                 >Phone Number<input
-                  type="text"
+                  type="tel"
+                  maxlength="10"
                   id="phonenumber"
                   name="phonenumber"
                   pattern="[0-9]{10}"
@@ -84,6 +88,7 @@
               ><label for="password"
                 >Password<input
                   type="text"
+                  minlength="8"
                   id="password"
                   name="password"
                   pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
