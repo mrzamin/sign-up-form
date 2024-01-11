@@ -19,8 +19,6 @@ body {
   height: 100%;
   margin: 0px;
   padding: 0px;
-
-  overflow: hidden;
 }
 /*overflow?*/
 
@@ -177,10 +175,12 @@ input:focus:invalid {
   border: 2px solid rgb(230, 50, 34);
 }
 
-#email-error {
-  color: red;
-  border: 3px solid black;
-  height: 25px;
+.error {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  position: absolute;
+  color: rgb(216, 59, 59);
+  font-weight: bold;
 }
 
 @media screen and (max-width: 800px) {

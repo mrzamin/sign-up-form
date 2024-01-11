@@ -60,11 +60,8 @@
                   type="text"
                   id="lastname"
                   name="lastname"
-                  required
-                />
-                <div class="error" id="last-name-error">
-                  Please provide your last name.
-                </div></label
+                  required />
+                <div class="error" id="last-name-error"></div></label
               ><label for="email"
                 >Email<input type="text" id="email" name="email" required />
                 <div class="error" id="email-error"></div></label
@@ -80,7 +77,6 @@
               ><label for="password"
                 >Password<input
                   type="password"
-                  minlength="8"
                   id="password"
                   name="password"
                   pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
@@ -89,7 +85,6 @@
               ><label for="confirmpassword"
                 >Confirm Password<input
                   type="password"
-                  minlength="8"
                   id="confirmpassword"
                   name="confirmpassword"
                   required

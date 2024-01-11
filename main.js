@@ -25,12 +25,13 @@ const validateInputs = () => {
   const fNameInput = firstName.value.trim();
   const lNameInput = lastName.value.trim();
   const emailInput = email.value.trim();
-  const passwordInput = password.value.trim();
-  const cPasswordInput = confirmPassword.value.trim();
+  let pInput = password.value.trim();
+  let cPasswordInput = confirmPassword.value.trim();
 
   validateFirstName(fNameInput);
   validateLastName(lNameInput);
   validateEmail(emailInput);
+  validatePassword(pInput);
 };
 
 function validateFirstName(name) {
@@ -49,7 +50,7 @@ function validateEmail(email) {
   if (email === "") {
     emailError.textContent = "Email is required.";
   } else if (!isValidEmail(email)) {
-    emailError.textContent = "Provide a valid email address.";
+    emailError.textContent = "Please provide a valid email address.";
   } else {
     emailError.textContent = "";
   }
@@ -58,4 +59,25 @@ function validateEmail(email) {
 function isValidEmail(email) {
   const regExp = /[^\s@]+@[^\s@]+\.[^\s@]+/;
   return email.match(regExp);
+}
+
+function validatePassword(p) {
+  let upperCaseLetters = /[A-Z]/g;
+  let lowerCaseLetters = /[a-z]/g;
+  let numbers = /[0-9]/g;
+
+  if (p === "") {
+    passwordError.textContent = "Password is required.";
+  } else if (p.match(!upperCaseLetters)) {
+    passwordError.textContent =
+      "Password must be 8 characters long, contain 1 uppercase and lowercase letter, and 1 number.";
+  } else if (p.match(!lowerCaseLetters)) {
+    passwordError.textContent =
+      "Password must be 8 characters long, contain 1 uppercase and lowercase letter, and 1 number.";
+  } else if (p.length < 8) {
+    passwordError.textContent =
+      "Password must be 8 characters long, contain 1 uppercase and lowercase letter, and 1 number.";
+  } else {
+    return;
+  }
 }
