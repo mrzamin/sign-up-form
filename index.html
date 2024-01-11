@@ -53,7 +53,7 @@
                   id="firstname"
                   name="firstname"
                   required />
-                <div class="error" id="first-name-error" d></div
+                <div class="error" id="first-name-error"></div
               ></label>
               <label for="lastname"
                 >Last Name<input
@@ -63,7 +63,12 @@
                   required />
                 <div class="error" id="last-name-error"></div></label
               ><label for="email"
-                >Email<input type="text" id="email" name="email" required />
+                >Email<input
+                  type="text"
+                  id="email"
+                  name="email"
+                  pattern="/[^\s@]+@[^\s@]+\.[^\s@]+/"
+                  required />
                 <div class="error" id="email-error"></div></label
               ><label for="phonenumber"
                 >Phone Number<input
@@ -87,12 +92,9 @@
                   type="password"
                   id="confirmpassword"
                   name="confirmpassword"
-                  required
-                />
-                <div class="error" id="confirm-password-error" hidden>
-                  Password does not match
-                </div></label
-              >
+                  required />
+                <div class="error" id="confirm-password-error"></div
+              ></label>
             </form>
           </div>
         </div>
