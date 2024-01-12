@@ -52,8 +52,8 @@ function validateLastName(name) {
 function validateEmail(email) {
   if (email === "") {
     emailError.textContent = "Email is required.";
-    document.getElementById("email").style.border =
-      "2px solid rgb(230, 50, 34)";
+    // document.getElementById("email").style.border =
+    //   "2px solid rgb(230, 50, 34)";
   } else if (!isValidEmail(email)) {
     emailError.textContent = "Please provide a valid email address.";
     document.getElementById("email").style.border =
@@ -123,31 +123,20 @@ confirmPassword.addEventListener("input", function (event) {
 });
 
 function validateMatch(match) {
-  if (password.value === "") {
+  if (match === "") {
+    confirmPasswordError.textContent = "Passwords don't match.";
+  } else if (password.value === "") {
     confirmPasswordError.textContent = "Password is required.";
-  }
-  if (password.value !== confirmPassword.value) {
+  } else if (password.value !== confirmPassword.value) {
     confirmPasswordError.textContent = "Passwords don't match";
+    document.getElementById("confirmpassword").style.border =
+      "2px solid rgb(230, 50, 34)";
   } else {
     confirmPasswordError.textContent = "";
+    document.getElementById("confirmpassword").style.border =
+      "2px solid rgb(115, 215, 21)";
   }
 }
-// function validatePassword(p) {
-//   if (p === "") {
-//     passwordError.textContent = "Password is required.";
-//   } else if (p.includes(!upperCaseLetters)) {
-//     passwordError.textContent =
-//       "Password must be 8 characters long, contain 1 uppercase and lowercase letter, and 1 number.";
-//   } else if (p.includes(!lowerCaseLetters)) {
-//     passwordError.textContent =
-//       "Password must be 8 characters long, contain 1 uppercase and lowercase letter, and 1 number.";
-//   } else if (p.length < 8) {
-//     passwordError.textContent = "Password must be 8 characters long.";
-//   } else {
-//     return;
-//   }
-// }
-
 // function validatePasswordMatch(p) {
 //   if (password.value === "" && p === "") {
 //     confirmPasswordError.textContent = "Passwords do not match.";
