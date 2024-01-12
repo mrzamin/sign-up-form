@@ -50,8 +50,12 @@ function validateLastName(name) {
 function validateEmail(email) {
   if (email === "") {
     emailError.textContent = "Email is required.";
+    document.getElementById("email").style.border =
+      "2px solid rgb(230, 50, 34)";
   } else if (!isValidEmail(email)) {
     emailError.textContent = "Please provide a valid email address.";
+    document.getElementById("email").style.border =
+      "2px solid rgb(230, 50, 34)";
   } else {
     emailError.textContent = "";
     document.getElementById("email").style.border =
