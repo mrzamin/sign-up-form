@@ -25,8 +25,8 @@ const validateInputs = () => {
   const fNameInput = firstName.value.trim();
   const lNameInput = lastName.value.trim();
   const emailInput = email.value.trim();
+  const passwordInput = password.value.trim();
   const phoneInput = phoneNumber.value.trim();
-  let passwordInput = password.value.trim();
   let confirmPasswordInput = confirmPassword.value.trim();
 
   validateFirstName(fNameInput);
@@ -87,30 +87,60 @@ phoneNumber.addEventListener("input", function (event) {
   validatePhoneNumber(phoneNumber.value.trim());
 });
 
-function validatePassword(p) {
-  if (p === "") {
-    passwordError.textContent = "Password is required.";
-  } else if (p.includes(!upperCaseLetters)) {
-    passwordError.textContent =
-      "Password must be 8 characters long, contain 1 uppercase and lowercase letter, and 1 number.";
-  } else if (p.includes(!lowerCaseLetters)) {
-    passwordError.textContent =
-      "Password must be 8 characters long, contain 1 uppercase and lowercase letter, and 1 number.";
-  } else if (p.length < 8) {
-    passwordError.textContent = "Password must be 8 characters long.";
-  } else {
-    return;
-  }
-}
+password.addEventListener("input", function (event) {
+  validatePassword(password.value.trim());
+});
 
-function validatePasswordMatch(p) {
-  if (password.value === "" && p === "") {
-    confirmPasswordError.textContent = "Passwords do not match.";
-  } else if (p === "") {
-    confirmPasswordError.textContent = "";
-  } else if (p !== password.value) {
-    confirmPasswordError.textContent = "Passwords do not match.";
-  } else {
-    return;
+function validatePassword(p) {
+  const regEx = /(?=.*d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
+  const capitalLetters = /[A-Z]/g;
+  const numbers = /[0-9]/g;
+  let msg = "";
+
+  if (p === "") {
+    passwordError.textContent = "";
+  }
+  if (!regEx.test(p) && p.length > 0) {
+    if (!capitalLetters.test(p)) {
+      msg += "Missing at least 1 capital letter.";
+      msg += "\n";
+    }
+    if (!numbers.test(p) && p.length > 0) {
+      msg += "Missing at least 1 number.";
+      msg += "\n";
+    }
+
+    if (p.length < 8 && p.length > 0) {
+      msg += "Password must be at least 8 characters.";
+      msg += "\n";
+    }
+    passwordError.textContent = msg;
   }
 }
+// function validatePassword(p) {
+//   if (p === "") {
+//     passwordError.textContent = "Password is required.";
+//   } else if (p.includes(!upperCaseLetters)) {
+//     passwordError.textContent =
+//       "Password must be 8 characters long, contain 1 uppercase and lowercase letter, and 1 number.";
+//   } else if (p.includes(!lowerCaseLetters)) {
+//     passwordError.textContent =
+//       "Password must be 8 characters long, contain 1 uppercase and lowercase letter, and 1 number.";
+//   } else if (p.length < 8) {
+//     passwordError.textContent = "Password must be 8 characters long.";
+//   } else {
+//     return;
+//   }
+// }
+
+// function validatePasswordMatch(p) {
+//   if (password.value === "" && p === "") {
+//     confirmPasswordError.textContent = "Passwords do not match.";
+//   } else if (p === "") {
+//     confirmPasswordError.textContent = "";
+//   } else if (p !== password.value) {
+//     confirmPasswordError.textContent = "Passwords do not match.";
+//   } else {
+//     return;
+//   }
+// }
