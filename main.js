@@ -25,12 +25,14 @@ const validateInputs = () => {
   const fNameInput = firstName.value.trim();
   const lNameInput = lastName.value.trim();
   const emailInput = email.value.trim();
+  const phoneInput = phoneNumber.value.trim();
   let passwordInput = password.value.trim();
   let confirmPasswordInput = confirmPassword.value.trim();
 
   validateFirstName(fNameInput);
   validateLastName(lNameInput);
   validateEmail(emailInput);
+  validatePhoneNumber(phoneInput);
   validatePassword(passwordInput);
   validatePasswordMatch(confirmPasswordInput);
 };
@@ -70,6 +72,19 @@ function isValidEmail(email) {
 
 email.addEventListener("input", function (event) {
   validateEmail(email.value.trim());
+});
+
+function validatePhoneNumber(num) {
+  if (num.length === 10) {
+    phoneNumberError.textContent = "";
+  }
+  if (num.length < 10) {
+    phoneNumberError.textContent = "Please enter a 10-digit phone number.";
+  }
+}
+
+phoneNumber.addEventListener("input", function (event) {
+  validatePhoneNumber(phoneNumber.value.trim());
 });
 
 function validatePassword(p) {
