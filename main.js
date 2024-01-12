@@ -34,7 +34,7 @@ const validateInputs = () => {
   validateEmail(emailInput);
   validatePhoneNumber(phoneInput);
   validatePassword(passwordInput);
-  validatePasswordMatch(confirmPasswordInput);
+  validateMatch(confirmPasswordInput);
 };
 
 function validateFirstName(name) {
@@ -98,7 +98,7 @@ function validatePassword(p) {
   let msg = "";
 
   if (p === "") {
-    passwordError.textContent = "";
+    passwordError.textContent = "Password is required.";
   }
   if (!regEx.test(p) && p.length > 0) {
     if (!capitalLetters.test(p)) {
@@ -115,6 +115,21 @@ function validatePassword(p) {
       msg += "\n";
     }
     passwordError.textContent = msg;
+  }
+}
+
+confirmPassword.addEventListener("input", function (event) {
+  validateMatch(confirmPassword.value.trim());
+});
+
+function validateMatch(match) {
+  if (password.value === "") {
+    confirmPasswordError.textContent = "Password is required.";
+  }
+  if (password.value !== confirmPassword.value) {
+    confirmPasswordError.textContent = "Passwords don't match";
+  } else {
+    confirmPasswordError.textContent = "";
   }
 }
 // function validatePassword(p) {
