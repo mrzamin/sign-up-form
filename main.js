@@ -55,16 +55,23 @@ function validateEmail(email) {
     // document.getElementById("email").style.border =
     //   "2px solid rgb(230, 50, 34)";
   } else if (!isValidEmail(email)) {
-    emailError.textContent = "Please provide a valid email address.";
-    document.getElementById("email").style.border =
-      "2px solid rgb(230, 50, 34)";
-  } else {
-    emailError.textContent = "";
-    document.getElementById("email").style.border =
-      "2px solid rgb(115, 215, 21)";
+    if (email.activeElement) {
+      emailError.textContent = "Please provide a valid email address.";
+      document.getElementById("email").style.border =
+        "2px solid rgb(230, 50, 34)";
+    } else {
+      emailError.textContent = "Please provide a valid email address.";
+    }
+  } else if (isValidEmail(email)) {
+    if (email.activeElement) {
+      emailError.textContent = "";
+      document.getElementById("email").style.border =
+        "2px solid rgb(115, 215, 21)";
+    } else {
+      emailError.textContent = "";
+    }
   }
 }
-
 function isValidEmail(email) {
   const regExp = /[^\s@]+@[^\s@]+\.[^\s@]+/;
   return email.match(regExp);
