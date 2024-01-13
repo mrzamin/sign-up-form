@@ -1,11 +1,11 @@
 @font-face {
   font-family: customFont;
-  src: url(Dosis-VariableFont_wght.ttf);
+  src: url(fonts/Dosis-VariableFont_wght.ttf);
 }
 
 @font-face {
   font-family: Norse;
-  src: url(Norse-Bold.otf);
+  src: url(fonts/Norse-Bold.otf);
 }
 
 :root {
@@ -20,7 +20,6 @@ body {
   margin: 0px;
   padding: 0px;
 }
-/*overflow?*/
 
 .wrapper {
   display: flex;
@@ -35,7 +34,7 @@ body {
   height: 100vh;
   min-width: 345px;
   position: relative;
-  background: url(healthy-food-unsplash.jpg);
+  background: url(images/healthy-food-unsplash.jpg);
   background-size: cover;
   background-position: bottom right;
 
