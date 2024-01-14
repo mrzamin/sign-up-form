@@ -193,22 +193,26 @@ input:focus:invalid {
 }
 
 @media screen and (max-width: 800px) {
-  body {
-    overflow: visible;
-  }
+  /* body {
+    overflow: hidden;
+  } */
   .wrapper {
     flex-direction: column;
+    align-items: center;
   }
 
   .hero {
-    width: 100vw;
-    height: 20rem;
+    max-height: 20rem;
+    overflow: hidden;
   }
 
-  /* .second-section,
-  .third-section {
+  .logo-bar {
+    width: 100vw;
+    font-size: 10px;
+  }
+  .main {
     width: 100%;
-  } */
+  }
 
   form {
     justify-content: center;
@@ -218,10 +222,8 @@ input:focus:invalid {
     text-align: center;
   }
 
-  .third-section {
-    width: 100%;
-  }
   .text,
+  .main,
   .form-section,
   .submit-section,
   .third-section {
