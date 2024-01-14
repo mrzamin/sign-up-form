@@ -120,6 +120,11 @@ label {
   position: relative;
 }
 
+label span {
+  font-weight: 700;
+  color: black;
+}
+
 input {
   display: block;
   width: 90%;
