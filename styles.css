@@ -136,6 +136,11 @@ input {
   margin-top: 5px;
 }
 
+input::placeholder {
+  font-family: customFont;
+  font-size: 1rem;
+}
+
 .third-section {
   margin-top: 1.5rem;
 }
