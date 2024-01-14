@@ -205,14 +205,26 @@ input:focus:invalid {
     height: 20rem;
   }
 
-  .second-section,
+  /* .second-section,
   .third-section {
-    width: 100vw;
+    width: 100%;
+  } */
+
+  form {
+    justify-content: center;
   }
 
+  .text {
+    text-align: center;
+  }
+
+  .third-section {
+    width: 100%;
+  }
   .text,
   .form-section,
-  .submit-section {
+  .submit-section,
+  .third-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
